@@ -17,16 +17,18 @@ async def register_user(username:str, email:str, password:str):
     }
 
 
-@app.get("/api/v1/user_id/")
+@app.get("/api/v1/user/{id}/")
 async def get_user(user_id:str):
     users ={
         "hola43443":{
             "username": "napster",
-            "name": "gabo"
+            "email": "gabo@gmail.com",
+            "password": "123456789"
         },
-        "ide-67":{
-            "username": "andrey",
-            "name": "gabo"
+        "hola43443":{
+            "username": "david",
+            "email": "david@gmail.com",
+            "password": "12345678910"
             }
         }
 
@@ -41,3 +43,5 @@ async def get_user(user_id:str):
             content="No existe el usuario",
             status_code=status.HTTP_404_NOT_FOUND
         )
+
+
